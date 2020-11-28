@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+
+{% block content%}
+
+<h1 style="text-align:center;">Blog cua dat</h1>
+<div style="padding: 0px 40px;">
+    <h1 style="text-align:left;">
+    {{ post.title }}
+</h1>
+
+<small style="text-align:left;">
+    By: {{post.author}}
+</small>
+</div>
+<hr>
+<br>
+{{post.body}}
+<br><br>
+<a class="btn btn-primary" href="{% url 'home' %}">Back</a>
+
+
+{% endblock %}

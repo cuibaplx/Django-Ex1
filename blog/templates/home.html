@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+
+{% block content%}
+
+<h1 style="text-align:center;">Blog cua dat</h1>
+
+<ul>
+{% for x in object_list %}
+    <li>
+        <a href="{% url 'detailspost' x.pk %}">{{x.title}}</a> - {{x.author}}
+    </li>
+{% endfor%}
+</ul>
+
+{% endblock %}
